@@ -1,7 +1,6 @@
 {
   "name": "{{project_name}}",
-  "compatibility_date": "2024-01-01",
-  "pages_build": {
-    "compatibility_flags": ["nodejs_compat"]
-  }
+  "compatibility_date": "2024-09-23",
+  "compatibility_flags": ["nodejs_compat"],
+  "pages_build_output_dir": "./dist"
 }

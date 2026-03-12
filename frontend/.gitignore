@@ -5,5 +5,5 @@ dist/
 .vscode/
 .idea/
 .wrangler/
-.env
-.env.local
+.env*
+.dev.vars*
