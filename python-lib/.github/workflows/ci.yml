@@ -12,20 +12,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
       - name: Install dependencies
-        run: |
-          pip install -e ".[dev]"
+        run: uv sync --group dev
 
       - name: Run tests
-        run: pytest
+        run: uv run pytest
 
       - name: Type check
-        run: mypy src
+        run: uv run mypy src
 
       - name: Lint
-        run: ruff check src tests
+        run: uv run ruff check src tests

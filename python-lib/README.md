@@ -2,35 +2,41 @@
 
 {project_description}
 
-## Install
+## Prerequisite
 
 ```bash
-pip install -e .
+# Install uv (https://docs.astral.sh/uv/)
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 ## Development
 
 ```bash
-# Create virtual environment
-python -m venv .venv
-source .venv/bin/activate
-
-# Install dependencies
-pip install -e ".[dev]"
+# Create virtual env + install project and dev deps
+uv sync --group dev
 
 # Run tests
-pytest
+uv run pytest
 
 # Type check
-mypy src
+uv run mypy src
 
 # Lint
-ruff check src tests
+uv run ruff check src tests
 ```
 
 ## Build
 
 ```bash
-pip install build
-python -m build
+uv build
+```
+
+## Add dependency
+
+```bash
+# Runtime dependency
+uv add pydantic
+
+# Dev dependency
+uv add --dev pytest
 ```
