@@ -1,8 +1,0 @@
-name = "{{project_name}}"
-compatibility_date = "2024-01-01"
-
-[env.test]
-name = "{{project_name}}-test"
-
-[env.production]
-name = "{{project_name}}"

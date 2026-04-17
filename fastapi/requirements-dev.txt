@@ -1,8 +1,0 @@
--r requirements.txt
-
-# lint
-ruff
-
-# test
-pytest
-pytest-asyncio
