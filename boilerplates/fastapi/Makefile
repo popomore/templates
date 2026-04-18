@@ -1,5 +1,5 @@
 install:
-	pip install -r requirements-dev.txt
+	uv sync --group dev
 
 dev:
 	uvicorn app.main:app --reload --port=8000
