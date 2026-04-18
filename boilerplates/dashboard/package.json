@@ -20,7 +20,12 @@
     "@tanstack/react-router": "^1.0.0",
     "@tanstack/react-table": "^8.0.0",
     "zustand": "^5.0.0",
-    "recharts": "^2.0.0"
+    "recharts": "^2.15.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "react-is": "^19.0.0"
+    }
   },
   "devDependencies": {
     "@types/react": "^19.0.0",

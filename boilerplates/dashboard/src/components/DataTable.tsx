@@ -7,7 +7,7 @@ import {
 
 interface DataTableProps<T> {
   data: T[];
-  columns: ColumnDef<T, unknown>[];
+  columns: ColumnDef<T, any>[];
 }
 
 export function DataTable<T>({ data, columns }: DataTableProps<T>) {

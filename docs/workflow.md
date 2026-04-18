@@ -4,8 +4,8 @@
 
 ## 分支
 
-- 主干分支：`master`，始终保持可发布状态，禁止直接 push
-- 开发分支：从 `master` 切出，命名格式 `<type>/<slug>`
+- 主干分支：`main`（GitHub 默认）或 `master`，始终保持可发布状态，禁止直接 push
+- 开发分支：从主干分支切出，命名格式 `<type>/<slug>`
   - `feat/` 新功能
   - `fix/` 缺陷修复
   - `chore/` 杂项（依赖、配置、构建）
@@ -18,7 +18,7 @@
 
 遵循 [Conventional Commits](https://www.conventionalcommits.org/)：
 
-```
+```text
 <type>(<scope>): <subject>
 
 <body>
@@ -34,7 +34,7 @@
 
 ## Pull Request
 
-1. 从 `master` 拉取最新代码并 rebase
+1. 从主干分支拉取最新代码并 rebase
 2. 本地跑完 lint / 类型检查 / 测试再推送
 3. PR 标题沿用 Conventional Commits 格式
 4. PR 描述必须包含：
@@ -54,7 +54,7 @@
 
 ## 合并
 
-- 默认 **Squash merge**，保证 `master` 历史线性、每个 commit 对应一个 PR
+- 默认 **Squash merge**，保证主干历史线性、每个 commit 对应一个 PR
 - 合并信息使用 PR 标题，body 保留关键说明
 - 合并后删除远程分支
 
@@ -73,5 +73,5 @@
 ## Hotfix
 
 - 从受影响的发布 tag 切 `fix/` 分支
-- 修复 → PR → 合回 `master` → 打新 patch tag
+- 修复 → PR → 合回主干 → 打新 patch tag
 - 若涉及多个版本分支，逐个 cherry-pick，每个都走完整 PR 流程

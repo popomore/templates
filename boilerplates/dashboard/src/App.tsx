@@ -4,7 +4,6 @@ import {
   createRoute,
   RouterProvider,
   Outlet,
-  Link,
 } from "@tanstack/react-router";
 import { Sidebar } from "./components/Sidebar";
 import { DashboardPage } from "./routes/index";

@@ -27,6 +27,6 @@ pnpm build
 ## CLI
 
 ```bash
-# Run via npx after build
-pnpm build && npx mylib
+# Run the locally built CLI
+pnpm build && pnpm exec mylib
 ```
