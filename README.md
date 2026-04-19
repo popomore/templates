@@ -28,7 +28,7 @@ A collection of project boilerplates for quick project setup.
 
 ## Presets
 
-Presets are reusable configuration snippets that can be applied to any boilerplate.
+Presets are reusable configuration snippets that can be applied to Node.js boilerplates.
 
 | Preset | Description |
 |--------|-------------|
@@ -42,8 +42,9 @@ Copy the template directory and rename it to your project name:
 cp -r boilerplates/<template> /path/to/your-project
 ```
 
-To apply a preset, merge its files into your project:
+To apply a preset, copy its config files and manually merge `package.json`:
 
 ```bash
-cp -r presets/<preset>/. /path/to/your-project/
+rsync -av --exclude package.json presets/<preset>/ /path/to/your-project/
+# Then manually merge presets/<preset>/package.json into your project's package.json
 ```

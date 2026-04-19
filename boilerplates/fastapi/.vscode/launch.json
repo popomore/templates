@@ -6,7 +6,7 @@
       "type": "debugpy",
       "request": "launch",
       "module": "uvicorn",
-      "args": ["app.main:app", "--reload", "--uds", "/tmp/myapp.sock"],
+      "args": ["app.main:app", "--reload", "--uds", "/tmp/${workspaceFolderBasename}.sock"],
       "jinja": true
     }
   ]

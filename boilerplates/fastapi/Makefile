@@ -1,8 +1,10 @@
 install:
 	uv sync --group dev
 
+SOCKET ?= /tmp/$(notdir $(CURDIR)).sock
+
 dev:
-	uvicorn app.main:app --reload --uds /tmp/myapp.sock
+	uvicorn app.main:app --reload --uds "$(SOCKET)"
 
 test:
 	pytest tests/
