@@ -19,13 +19,15 @@
     "test:coverage": "vitest run --coverage",
     "lint": "oxlint",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "knip": "knip"
   },
   "devDependencies": {
     "typescript": "^6.0.0",
     "vitest": "^4.1.0",
     "@vitest/coverage-v8": "^4.1.0",
     "oxlint": "^1.60.0",
-    "prettier": "^3.8.0"
+    "prettier": "^3.8.0",
+    "knip": "^5.67.0"
   }
 }

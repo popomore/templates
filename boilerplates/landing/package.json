@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
+    "dev": "portless run vite dev",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "deploy:test": "vite build --mode test && wrangler pages deploy dist",
@@ -15,7 +15,8 @@
     "test:run": "vitest run",
     "lint": "oxlint",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "knip": "knip"
   },
   "dependencies": {
     "react": "^19.2.0",
@@ -32,6 +33,7 @@
     "vitest": "^4.1.0",
     "oxlint": "^1.60.0",
     "prettier": "^3.8.0",
-    "wrangler": "^4.83.0"
+    "wrangler": "^4.83.0",
+    "knip": "^5.67.0"
   }
 }
