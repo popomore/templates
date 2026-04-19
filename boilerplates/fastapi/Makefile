@@ -2,7 +2,7 @@ install:
 	uv sync --group dev
 
 dev:
-	uvicorn app.main:app --reload --port=8000
+	uvicorn app.main:app --reload --uds /tmp/myapp.sock
 
 test:
 	pytest tests/
