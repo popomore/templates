@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "wrangler dev",
+    "dev": "portless run wrangler dev",
     "deploy:test": "wrangler deploy --env test",
     "deploy:production": "wrangler deploy --env production",
     "test": "vitest run",
@@ -12,7 +12,8 @@
     "typecheck": "tsc --noEmit",
     "lint": "oxlint",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "knip": "knip"
   },
   "dependencies": {
     "hono": "^4.12.0"
@@ -24,6 +25,8 @@
     "@vitest/coverage-v8": "^4.1.0",
     "oxlint": "^1.60.0",
     "prettier": "^3.8.0",
-    "wrangler": "^4.83.0"
+    "wrangler": "^4.83.0",
+    "knip": "^5.67.0",
+    "portless": "^0.10.0"
   }
 }
